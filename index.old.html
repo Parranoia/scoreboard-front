@@ -1,0 +1,144 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Scoreboard</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="text-center">Last Game</h1>
+        <div class="col-xs-6">
+            <h2 class="text-center">Away <small>(Sam)</small></h2>
+            <h1 class="text-center"><kbd>17</kbd></h1>
+        </div>
+        <div class="col-xs-6">
+            <h2 class="text-center">Home <small>(Alecx)</small></h2>
+            <h1 class="text-center"><kbd>27</kbd></h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h3 class="text-center">Recent Games</h3>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Away</th>
+                <th>Score</th>
+                <th>Home</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="bg-danger text-danger">Sam</td>
+                <td class="bg-danger text-danger">17</td>
+                <td class="bg-success text-success">Alecx</td>
+                <td class="bg-success text-success">27</td>
+            </tr>
+            <tr>
+                <td class="bg-danger text-danger">Alecx</td>
+                <td class="bg-danger text-danger">13</td>
+                <td class="bg-success text-success">Sam</td>
+                <td class="bg-success text-success">29</td>
+            </tr>
+            <tr>
+                <td class="bg-success text-success">Alecx</td>
+                <td class="bg-success text-success">88</td>
+                <td class="bg-danger text-danger">Sam</td>
+                <td class="bg-danger text-danger">62</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr/>
+    <div class="text-center">
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addNewGameModal">Add New Game</button>
+    </div>
+    <div class="modal fade" id="addNewGameModal" role="dialog" aria-labelledby="addNewGameLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="addNewGameLabel">Add New Game</h4>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="action.php">
+              <div class="row">
+                  <div class="col-xs-6 col-xs-offset-3">
+                      <div class="form-group">
+                          <label for="gameSelect">Select Game</label>
+                          <select class="form-control gameSelect" id="gameSelect">
+                              
+                          </select>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                <h3 class="text-center">Away Team</h3>
+                <div class="form-group">
+                    <div class="col-xs-3">
+                      <label for="awayPlayerSelect">Select Player</label>
+                      <select class="form-control" id="awayPlayerSelect">
+                        <option>Alecx</option>
+                        <option>Sam</option>
+                      </select>
+                    </div>
+                    <div class="col-xs-6">
+                        <label for="awayTeamSelect">Select Team</label>
+                        <select class="form-control" id="awayTeamSelect">
+                            <option>Alabama</option>
+                            <option>LSU</option>
+                            <option>Virginia Tech</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-3">
+                        <label for="awayTeamScore">Score</label>
+                        <input type="text" class="form-control" id="awayTeamScore" placeholder="Enter Score"/>
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                  <h3 class="text-center">Home Team</h3>
+                  <div class="form-group">
+                      <div class="col-xs-3">
+                        <label for="homePlayerSelect">Select Player</label>
+                        <select class="form-control" id="homePlayerSelect">
+                          <option>Alecx</option>
+                          <option>Sam</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-6">
+                          <label for="homeTeamSelect">Select Team</label>
+                          <select class="form-control" id="homeTeamSelect">
+                              <option>Alabama</option>
+                              <option>LSU</option>
+                              <option>Virginia Tech</option>
+                          </select>
+                      </div>
+                      <div class="col-xs-3">
+                          <label for="homeTeamScore">Score</label>
+                          <input type="text" class="form-control" id="homeTeamScore" placeholder="Enter Score"/>
+                      </div>
+                  </div>
+                </div>
+          </form> 
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
